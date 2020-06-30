@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color:grey;
+    height: 100%;
+    width: 100%;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    height: auto;
+    background-color: white;
+}
+.logoArea{
+    height: 20%;
+    width: 100%;
+    position: relative;
+    /* z-index: 9; */
+    /* background-color: blue; */
+}
+.logoArea img{
+    display: block;
+    margin: auto;
+    width:50%;
+    height:100%
+}
+h1{
+    color: red;
+}
+.ck-editor__editable_inline {
+    min-height: 500px;
+}

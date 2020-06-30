@@ -1,0 +1,50 @@
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/home">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <!-- <div><a href="/home" class="navbar-brand">HOME</a></div> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!-- <li>
+                <a  class="nav-link" href="/user">user</a>
+            </li>
+            <li>
+                <a  class="nav-link" href="/admin">admin</a>
+            </li>
+            <li>
+                <a  class="nav-link" href="/moderator">moderator</a>
+            </li> -->
+            <li>
+                <a  class="nav-link" href="/about">Lien He</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dịch Vụ & Sản Phẩm
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <!-- <a class="dropdown-item" href="#">Action</a> -->
+                  <a class="dropdown-item" href="/tent">Lều</a>
+                  <a class="dropdown-item" href="/restaurant">Nhà Hàng</a>
+                </div>
+              </li>
+            <!-- <li>
+                <a  class="nav-link" href="/tent">Lều</a>
+            </li>
+            <li>
+                <a  class="nav-link" href="/restaurant">nhà hàng</a>
+            </li> -->
+        </ul>
+        <ul class="navbar-nav">
+            <li>
+                <a *ngIf = "!_service.loggedIn()" class="nav-link" href="/register">Register</a>
+            </li>
+            <li>
+                <a *ngIf = "!_service.loggedIn()" class="nav-link" href="/login">Login</a>
+            </li>
+            <li>
+                <a (click) = _service.logOutUser() *ngIf = "_service.loggedIn()" class="nav-link" href="/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+    </nav>

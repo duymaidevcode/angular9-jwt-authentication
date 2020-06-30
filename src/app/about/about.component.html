@@ -1,0 +1,27 @@
+<app-navigationbar></app-navigationbar>
+<h1>Classic editor</h1>
+<!-- <ckeditor [editor]="Editor" 
+[disabled]="isDisabled"
+[config]="{ toolbar: [ 'heading', '|', 'bold', 'italic' ] }"
+
+data="<p>Hello, world!</p>"></ckeditor> -->
+
+<!-- <div *ngIf="ready">
+    <ckeditor [watchdog]="watchdog"></ckeditor>
+    <ckeditor [watchdog]="watchdog"></ckeditor>
+    <ckeditor [watchdog]="watchdog"></ckeditor>
+</div> -->
+
+<!-- <ckeditor [editor]="Editor" 
+[disabled]="isDisabled"
+(ready)="onReady($event)"
+type="inline"
+></ckeditor> -->
+<!-- <ckeditor [editor]="Editor" data="<p>Hello, world!</p>" (ready)="onReady($event)"></ckeditor> -->
+<ckeditor [editor]="Editor" data="<p>Hello, world!</p>" (ready)="onReady($event)"></ckeditor>
+
+
+
+<button (click)="toggleDisabled()">
+    {{ isDisabled ? 'Enable editor' : 'Disable editor' }}
+</button>

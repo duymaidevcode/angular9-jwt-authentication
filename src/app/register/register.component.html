@@ -1,0 +1,35 @@
+<app-navigationbar></app-navigationbar>
+<div class="row pt-5">
+
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h3>Register Form</h3>
+            </div>
+            <div class="card-body">
+                <h3 *ngIf ='!successRegister' class="text-danger">{{errorMessage}}</h3>
+                <h3 *ngIf = 'successRegister' class="text-sucess">{{sucessMessage}}</h3>
+                <form class="form">
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input [(ngModel)]="registerUserData.email" type="email" name="email" id="emai" class="form-control rounded-0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input [(ngModel)]="registerUserData.username" type="text" name="username" id="username" class="form-control rounded-0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input [(ngModel)]="registerUserData.password" type="password" name="password" id="password" class="form-control rounded-0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roles">Roles</label>
+                        <input [(ngModel)]="registerUserData.roles" type="roles" name="roles" id="roles" class="form-control rounded-0" required>
+                    </div>
+                    <button (click)=registerUser() class="btn btn-primary float-right">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
